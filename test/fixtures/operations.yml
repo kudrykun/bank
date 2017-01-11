@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 9.99
+  meta_name: MyString
+  date: 2017-01-11
+  operator: one
+  account: one
+
+two:
+  amount: 9.99
+  meta_name: MyString
+  date: 2017-01-11
+  operator: two
+  account: two

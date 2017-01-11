@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  rate: 1.5
+  period: 2017-01-11
+
+two:
+  type: 
+  rate: 1.5
+  period: 2017-01-11

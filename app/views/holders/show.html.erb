@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @holder.name %>
+</p>
+
+<p>
+  <strong>Surename:</strong>
+  <%= @holder.surename %>
+</p>
+
+<p>
+  <strong>Passport:</strong>
+  <%= @holder.passport %>
+</p>
+
+<%= link_to 'Edit', edit_holder_path(@holder) %> |
+<%= link_to 'Back', holders_path %>

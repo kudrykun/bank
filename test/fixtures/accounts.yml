@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  balance: 9.99
+  holder: one
+  deposit_type: one
+
+two:
+  balance: 9.99
+  holder: two
+  deposit_type: two
