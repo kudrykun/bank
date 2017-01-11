@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111142638) do
+ActiveRecord::Schema.define(version: 20170111155020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 20170111142638) do
   end
 
   create_table "deposit_types", force: :cascade do |t|
-    t.string   "type"
     t.float    "rate"
-    t.date     "period"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "period"
+    t.string   "title"
   end
 
   create_table "holders", force: :cascade do |t|

@@ -1,2 +1,50 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-striped table-hover">
+        <caption>Вкладчики</caption>
+        <thead>
+          <th>Фамилия</th>
+          <th>Имя</th>
+          <th>Номер паспорта</th>
+          <th>Вкладов</th>
+          <th>Инфо</th>
+        </thead>
+        <tbody>
+          <%@holders.each do |holder|%>
+            <tr>
+              <td><%=holder.surename%></td>
+              <td><%=holder.name%></td>
+              <td><%=holder.passport%></td>
+              <td><%=holder.accounts.size%></td>
+              <td><%=link_to 'Инфо', holder_path(holder)%></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <table class="table table-striped table-hover">
+        <caption>Влады</caption>
+        <thead>
+          <th>Номер счета</th>
+          <th>Вкладчик</th>
+          <th>Вид вклада</th>
+          <th>Открыт</th>
+          <th>Инфо</th>
+        </thead>
+        <tbody>
+        <%@accounts.each do |account|%>
+          <tr>
+            <td><%=account.id%></td>
+            <td><%=account.holder.surename%></td>
+            <td><%=account.deposit_type.title%></td>
+            <td><%=account.created_at%></td>
+            <td><%=link_to 'Инфо', account_path(account)%></td>
+          </tr>
+        <%end%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
